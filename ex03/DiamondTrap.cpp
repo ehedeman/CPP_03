@@ -1,0 +1,74 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/20 13:46:56 by ehedeman          #+#    #+#             */
+/*   Updated: 2024/09/20 15:01:10 by ehedeman         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "DiamondTrap.hpp"
+
+
+DiamondTrap::DiamondTrap( void ): ClapTrap("default_ClapTrap")
+{
+	this->name			= "default";
+	this->hit_p			= 100;	//FragTrap HP = 100
+	this->energy_p		= 50;	//ScavTrap EP = 50
+	this->attack_d		= 30;	//FragTrap AD = 30
+	this->guarding_gate = false;
+	std::cout << "Diamond-Default Constructor called for " <<
+	this->name << "." << std::endl;
+}
+
+DiamondTrap::DiamondTrap( std::string name ): ClapTrap(name + "_ClapTrap")/*, \
+	ScavTrap( name + "_ScavTrap"), FragTrap( name + "_FragTrap")*/
+{
+	this->name			= name;
+	this->hit_p			= 100;	//FragTrap HP = 100
+	this->energy_p		= 50;	//ScavTrap EP = 50
+	this->attack_d		= 30;	//FragdTrap AD = 30
+	this->guarding_gate = false;
+	std::cout << "Diamond-Name-Based Constructor called for " <<
+	this->name << "." << std::endl;
+}
+
+DiamondTrap::DiamondTrap( const DiamondTrap &copy ): ClapTrap(copy), ScavTrap(copy), FragTrap(copy)
+{
+	*this 				= copy;
+	std::cout << "Diamond-copy constructor called for " <<
+	this->name << "." << std::endl;
+}
+
+DiamondTrap::~DiamondTrap()
+{
+	std::cout << "Diamond-Destrucor called for " << this->name <<
+	"." << std::endl;
+}
+
+DiamondTrap		&DiamondTrap::operator=(const DiamondTrap &dia)
+{
+	this->name			= dia.name;
+	this->hit_p			= dia.hit_p;
+	this->energy_p		= dia.energy_p;
+	this->attack_d		= dia.attack_d;
+	this->guarding_gate	= dia.guarding_gate;
+	std::cout << "Diamond-Assignment operator called for " <<
+	this->name << "." << std::endl;
+	return (*this);
+}
+
+void			DiamondTrap::attack( std::string &target )
+{
+	ScavTrap::attack(target);
+}
+
+void			DiamondTrap::whoAmI( void )
+{
+	std::cout << "DiamondTrap Name: "	<< this->name		<<
+	std::endl << "ClapTrap Name "		<< ClapTrap::name	<<
+	std::endl;
+}
