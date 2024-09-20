@@ -6,7 +6,7 @@
 #    By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/06 14:26:42 by ehedeman          #+#    #+#              #
-#    Updated: 2024/09/19 12:15:18 by ehedeman         ###   ########.fr        #
+#    Updated: 2024/09/20 14:47:01 by ehedeman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,12 +17,12 @@ OBJS_DIR = objs/
 OBJS = $(SRC:.cpp=.o)
 OBJS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
 HEADERS = ClapTrap.hpp
-CC = g++
+CC = c++
 RM = rm -rf
 MKDIR = mkdir -p
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
-NAME = clap
+NAME = ClapTrap
 
 all: $(NAME)
 

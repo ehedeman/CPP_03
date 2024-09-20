@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 12:13:18 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/09/19 14:16:47 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/09/20 11:08:11 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ public:
 	void				setHp(unsigned int hp);
 	void				setEp(unsigned int ep);
 	void				setaD(unsigned int ad);
+	void				setName( std::string name );
 	std::string			getName( void );
 	unsigned int		getHp( void );
 	unsigned int		getEp( void );
@@ -53,6 +54,8 @@ public:
 	void				attack(const std::string &target);
 	void				takeDemage(unsigned int amount);
 	void				beRepaired(unsigned int amount);
+	
+	void				printHP( void );
 };
 
 
