@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 11:43:38 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/09/20 13:44:16 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/09/20 15:05:41 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 ScavTrap::ScavTrap( void ): ClapTrap()
 {
 	this->guarding_gate	= false;
-	this->name			= "default";
 	this->hit_p			= 100;
 	this->energy_p		= 50;
 	this->attack_d		= 20;
@@ -28,7 +27,6 @@ ScavTrap::ScavTrap( std::string name ): ClapTrap ( name )
 	this->hit_p			= 100;
 	this->energy_p		= 50;
 	this->attack_d		= 20;
-	this->name			= name;
 	std::cout << "Scav-Name-Based Constructor called for " << this->name << "." << std::endl;
 }
 

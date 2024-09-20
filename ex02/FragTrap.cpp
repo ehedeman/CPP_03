@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 13:05:54 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/09/20 13:43:13 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/09/20 15:05:25 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 FragTrap::FragTrap( void ): ClapTrap()
 {
-	this->name		= "default";
 	this->hit_p		= 100;
 	this->energy_p	= 100;
 	this->attack_d	= 30;
@@ -27,7 +26,6 @@ FragTrap::FragTrap( std::string name ): ClapTrap ( name )
 	this->hit_p		= 100;
 	this->energy_p	= 50;
 	this->attack_d	= 20;
-	this->name		= name;
 	std::cout << "Frag-Name-Based Constructor called for " << this->name << "." << std::endl;
 }
 
