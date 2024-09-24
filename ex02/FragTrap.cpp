@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 13:05:54 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/09/20 15:05:25 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/09/24 12:27:32 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ FragTrap::FragTrap( void ): ClapTrap()
 FragTrap::FragTrap( std::string name ): ClapTrap ( name )
 {
 	this->hit_p		= 100;
-	this->energy_p	= 50;
-	this->attack_d	= 20;
+	this->energy_p	= 100;
+	this->attack_d	= 30;
 	std::cout << "Frag-Name-Based Constructor called for " << this->name << "." << std::endl;
 }
 
@@ -40,12 +40,12 @@ FragTrap::~FragTrap()
 	std::cout << "Frag-Destrucor called for " << this->name << "." << std::endl;
 }
 
-FragTrap	&FragTrap::operator=( const FragTrap &sca)
+FragTrap	&FragTrap::operator=( const FragTrap &frag)
 {
-	this->name		= sca.name;
-	this->hit_p		= sca.hit_p;
-	this->energy_p	= sca.energy_p;
-	this->attack_d	= sca.attack_d;
+	this->name		= frag.name;
+	this->hit_p		= frag.hit_p;
+	this->energy_p	= frag.energy_p;
+	this->attack_d	= frag.attack_d;
 	std::cout << "Frag-Assignment operator called for " << this->name << "." << std::endl;
 	return (*this);
 }
