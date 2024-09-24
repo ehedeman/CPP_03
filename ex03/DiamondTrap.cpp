@@ -6,31 +6,32 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 13:46:56 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/09/20 15:01:10 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/09/24 13:07:06 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 
-DiamondTrap::DiamondTrap( void ): ClapTrap("default_ClapTrap")
+DiamondTrap::DiamondTrap( void ): ClapTrap("default_clap_name")
 {
 	this->name			= "default";
-	this->hit_p			= 100;	//FragTrap HP = 100
-	this->energy_p		= 50;	//ScavTrap EP = 50
-	this->attack_d		= 30;	//FragTrap AD = 30
+	this->ScavTrap::energy_p = 50;
+	this->hit_p			= FragTrap::hit_p;	//FragTrap HP = 100
+	this->energy_p		= ScavTrap::energy_p;	//ScavTrap EP = 50
+	this->attack_d		= FragTrap::attack_d;	//FragdTrap AD = 30
 	this->guarding_gate = false;
 	std::cout << "Diamond-Default Constructor called for " <<
 	this->name << "." << std::endl;
 }
 
-DiamondTrap::DiamondTrap( std::string name ): ClapTrap(name + "_ClapTrap")/*, \
-	ScavTrap( name + "_ScavTrap"), FragTrap( name + "_FragTrap")*/
+DiamondTrap::DiamondTrap( std::string name ): ClapTrap(name + "_clap_name")
 {
+	this->ScavTrap::energy_p = 50;
 	this->name			= name;
-	this->hit_p			= 100;	//FragTrap HP = 100
-	this->energy_p		= 50;	//ScavTrap EP = 50
-	this->attack_d		= 30;	//FragdTrap AD = 30
+	this->hit_p			= FragTrap::hit_p;	//FragTrap HP = 100
+	this->energy_p		= ScavTrap::energy_p;	//ScavTrap EP = 50
+	this->attack_d		= FragTrap::attack_d;	//FragdTrap AD = 30
 	this->guarding_gate = false;
 	std::cout << "Diamond-Name-Based Constructor called for " <<
 	this->name << "." << std::endl;
