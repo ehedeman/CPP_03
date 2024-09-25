@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 12:13:21 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/09/24 12:23:48 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/09/25 10:54:34 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap( void )
 	this->attack_d	= 0;
 	std::cout << "Default constructor called for " << this->name << "." << std::endl;
 }
-ClapTrap::ClapTrap( const std::string name ): name(name)
+ClapTrap::ClapTrap( const std::string _name ): name(_name)
 {
 	this->hit_p		= 10;
 	this->energy_p	= 10;
@@ -59,7 +59,7 @@ ClapTrap		&ClapTrap::operator=(const ClapTrap &clap)
 void				ClapTrap::setHp(unsigned int hp){this->hit_p = hp;}
 void				ClapTrap::setEp(unsigned int ep){this->energy_p = ep;}
 void				ClapTrap::setaD(unsigned int ad){this->attack_d = ad;}
-void				ClapTrap::setName(std::string name){this->name = name;}
+void				ClapTrap::setName(std::string _name){this->name = _name;}
 std::string			ClapTrap::getName( void ){return (this->name);}
 unsigned int		ClapTrap::getHp( void ){return (this->hit_p);}
 unsigned int		ClapTrap::getEp( void ){return (this->energy_p);}

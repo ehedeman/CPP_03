@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 13:46:56 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/09/24 13:07:06 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/09/25 14:01:14 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ DiamondTrap::DiamondTrap( void ): ClapTrap("default_clap_name")
 	this->name << "." << std::endl;
 }
 
-DiamondTrap::DiamondTrap( std::string name ): ClapTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap( std::string _name ): ClapTrap(_name + "_clap_name")
 {
 	this->ScavTrap::energy_p = 50;
-	this->name			= name;
+	this->name			= _name;
 	this->hit_p			= FragTrap::hit_p;	//FragTrap HP = 100
 	this->energy_p		= ScavTrap::energy_p;	//ScavTrap EP = 50
 	this->attack_d		= FragTrap::attack_d;	//FragdTrap AD = 30
@@ -60,11 +60,6 @@ DiamondTrap		&DiamondTrap::operator=(const DiamondTrap &dia)
 	std::cout << "Diamond-Assignment operator called for " <<
 	this->name << "." << std::endl;
 	return (*this);
-}
-
-void			DiamondTrap::attack( std::string &target )
-{
-	ScavTrap::attack(target);
 }
 
 void			DiamondTrap::whoAmI( void )

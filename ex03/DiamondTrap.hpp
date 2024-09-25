@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 13:47:01 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/09/20 14:35:36 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/09/25 14:01:07 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ public:
 	virtual			~DiamondTrap();
 	DiamondTrap		&operator=(const DiamondTrap &dia);
 	
-	void			attack( std::string &target );
 	void			whoAmI( void );
+	using			ScavTrap::attack;
 };
 
 

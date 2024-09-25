@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 13:05:54 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/09/24 12:27:32 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/09/25 10:55:33 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ FragTrap::FragTrap( void ): ClapTrap()
 }
 
 
-FragTrap::FragTrap( std::string name ): ClapTrap ( name )
+FragTrap::FragTrap( std::string _name ): ClapTrap ( _name )
 {
 	this->hit_p		= 100;
 	this->energy_p	= 100;

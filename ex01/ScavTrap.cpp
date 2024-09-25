@@ -6,7 +6,7 @@
 /*   By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 11:43:38 by ehedeman          #+#    #+#             */
-/*   Updated: 2024/09/20 15:08:23 by ehedeman         ###   ########.fr       */
+/*   Updated: 2024/09/25 10:54:48 by ehedeman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ ScavTrap::ScavTrap( void ): ClapTrap()
 	std::cout << "Scav-Default constructor called for " << this->name << "." << std::endl;
 }
 
-ScavTrap::ScavTrap( std::string name ): ClapTrap ( name )
+ScavTrap::ScavTrap( std::string _name ): ClapTrap ( _name )
 {
 	this->guarding_gate	= false;
 	this->hit_p			= 100;

@@ -6,7 +6,7 @@
 #    By: ehedeman <ehedeman@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/06 14:26:42 by ehedeman          #+#    #+#              #
-#    Updated: 2024/09/20 14:46:50 by ehedeman         ###   ########.fr        #
+#    Updated: 2024/09/25 10:51:41 by ehedeman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ HEADERS = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 CC = c++
 RM = rm -rf
 MKDIR = mkdir -p
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CPPFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98 -pedantic
 
 NAME = FragTrap
 
